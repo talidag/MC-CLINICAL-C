@@ -52,23 +52,26 @@ flexibility(document.documentElement);
 <![endif]-->
 <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
 <script>
-   $.getScript("https://secure.mydroot.eu/evolvo/api/onlinescheduler/drscheduler.js?rnd="+Math.ceil(Math.random()*1000000000),function(){
-       $(".dscheduler-button").PGEYpBmXLo({
-           apikey:"d7c0d57022fe06f1fcd0c32c4a1149570a1824b5958d42f5548c905b33b002ae7e12518ac74d", //Communication API key
-           labelColor: "#444444",           //html color for labels
-           backgroundColor: "#ffffff",      //html color for background
-           textColor:"#185abc",             //html color for text
-           textBackgroundColor:"#ffffff",   //html color for text background
-           buttonColor:"#444444",           //html color for button text
-           buttonBackgroundColor:"#efefef", //html color for button background
-           lang:1,                          //Interface language 0-English, 1-Romanian, 2-Hungarian
-           selectWorkstation:"",            //Name (alias) of the selected workstation
-           selectMedic:"",                  //Name (alias) of the selected medic
-           lockMedic:false,                 //Disable medic selection other than selectMedic
-           privacyPolicyLink:"",            //Link to privacy policy
-           successCallback:function(appointmentInfo){},   //Callback function for successful appointment creation
+
+	document.addEventListener('DOMContentLoaded', function() { 
+		$.getScript("https://secure.mydroot.eu/evolvo/api/onlinescheduler/drscheduler.js?rnd="+Math.ceil(Math.random()*1000000000),function(){
+		       $(".dscheduler-button").PGEYpBmXLo({
+		           apikey:"d7c0d57022fe06f1fcd0c32c4a1149570a1824b5958d42f5548c905b33b002ae7e12518ac74d", //Communication API key
+		           labelColor: "#444444",           //html color for labels
+		           backgroundColor: "#ffffff",      //html color for background
+		           textColor:"#185abc",             //html color for text
+		           textBackgroundColor:"#ffffff",   //html color for text background
+		           buttonColor:"#444444",           //html color for button text
+		           buttonBackgroundColor:"#efefef", //html color for button background
+		           lang:1,                          //Interface language 0-English, 1-Romanian, 2-Hungarian
+		           selectWorkstation:"",            //Name (alias) of the selected workstation
+		           selectMedic:"",                  //Name (alias) of the selected medic
+		           lockMedic:false,                 //Disable medic selection other than selectMedic
+		           privacyPolicyLink:"",            //Link to privacy policy
+		           successCallback:function(appointmentInfo){},   //Callback function for successful appointment creation
        });
-   });
+   });});
+  
 </script>
 	
 <script src="./wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.25.4" id="font-awesome-4-shim-js"></script>
