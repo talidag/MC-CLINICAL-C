@@ -495,7 +495,7 @@ flexibility(document.documentElement);
 			<script>/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);</script>
 <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
 <script>
-
+    $(document).ready(function() {
 		$.getScript("https://secure.mydroot.eu/evolvo/api/onlinescheduler/drscheduler.js?rnd="+Math.ceil(Math.random()*1000000000),function(){
 		       $(".dscheduler-button").PGEYpBmXLo({
 		           apikey:"d7c0d57022fe06f1fcd0c32c4a1149570a1824b5958d42f5548c905b33b002ae7e12518ac74d", //Communication API key
@@ -513,7 +513,8 @@ flexibility(document.documentElement);
 		           successCallback:function(appointmentInfo){},   //Callback function for successful appointment creation
        });
    });
-  
+});
+
 </script>				
 
 
